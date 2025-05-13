@@ -1,0 +1,48 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Agencia de Viajes
+link(rel="stylesheet", href="/css/style.css")
+link(rel="icon", href="/images/logo.png")
+nav.menu
+  .logo
+    a(href="/")
+      img(src="/images/logo.png", alt="Logo Agencia")
+    
+  .nav__links
+    a(href="/")
+      if currentUrl == "/"
+        strong Inicio
+      else
+        | Inicio
+
+    a(href="/destinations")
+      if currentUrl == "/destinations"
+        strong Destinos
+      else
+        | Destinos
+
+    a(href="/planes")
+      if currentUrl == "/planes"
+        strong Aviones
+      else
+        | Aviones
+
+    a(href="/budgets")
+      if currentUrl == "/budgets"
+        strong Ver presupuestos
+      else
+        | Ver presupuestos
+
+    a(href="/budget")
+      if currentUrl == "/budget"
+        strong Solicitar Presupuesto
+      else
+        | Solicitar Presupuesto
+
+  .auth
+    if username
+      span.btn-auth(href="/profile") #{username}
+      a.btn-auth(href="/logout") Cerrar Sesión
+    else
+      a.btn-auth(href="/login") Iniciar Sesión
+      a.btn-auth(href="/register") Registrarse

@@ -1,0 +1,28 @@
+include partials/header
+
+main.budgets
+  .page-hero
+    .page-hero__background(style="background-image: url('/images/budget-hero.jpg')")
+    .page-hero__text
+      h1 Presupuestos Solicitados
+
+  .planes
+    each budget in budgets
+      .plane.card
+        img(src=budget.image, alt=budget.destination_name)
+        .plane__info
+          h2= budget.name
+          p
+            strong Email: 
+            |  #{budget.email}
+          p
+            strong Destino: 
+            |  #{budget.destination_name}
+          p
+            strong Fecha: 
+            |  #{budget.date}
+          p
+            strong Mensaje: 
+            |  #{budget.message}
+
+include partials/footer

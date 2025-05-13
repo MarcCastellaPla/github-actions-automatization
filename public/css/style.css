@@ -1,0 +1,672 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav__links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form__group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Página de inicio */
+.home {
+    padding: 2rem;
+    background-color: #f5f7fa;
+}
+
+
+.featured__sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.section {
+    text-align: center;
+    padding: 1rem;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    margin: 0 3rem;
+}
+
+.destino__card.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.destino__card.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.destino__card.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.destino__card.card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.destino__card.card p {
+    padding: 0 1.5rem;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.destino__card.card .btn {
+    margin: auto 1.5rem 1.5rem;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.destino__card.card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Página de Aviones */
+.aviones {
+    padding: 2rem;
+}
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Mejoramos también .plane dentro de .card */
+.plane.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.plane.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plane.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plane.card h2 {
+    padding: 1rem 1.5rem 0.5rem;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.plane.card p {
+    padding: 0 1.5rem 1.5rem;
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Página de Presupuesto */
+.presupuesto {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.presupuesto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presupuesto label {
+    font-weight: bold;
+}
+
+.presupuesto input,
+.presupuesto select,
+.presupuesto textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.presupuesto button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* —————————————————————————————
+   Home Featured Sections “Card” — Improved
+   ————————————————————————————— */
+   .card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 12px;
+}
+
+.card h2 {
+    padding: 1rem 1.5rem 0.5rem;
+    margin: 0;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.card p {
+    padding: 0 1.5rem;
+    margin: 0 0 1.5rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.card .btn {
+    margin: auto 1.5rem 1.5rem;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* —————————————————————————————
+   Hero Section
+   ————————————————————————————— */
+   .hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* or 70vh if you want it taller */
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.hero__text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* —————————————————————————————
+   Mejoras Menú
+   ————————————————————————————— */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav__links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+/* subrayado bonito al pasar mouse */
+.nav__links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.nav__links a:hover::after {
+    width: 100%;
+}
+
+/* Botones de sesión */
+.auth {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-auth {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-auth:hover {
+    background-color: #0056b3;
+}
+
+/* —————————————————————————————
+   Página de Presupuesto Mejorada
+   ————————————————————————————— */
+   .presupuesto {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.presupuesto h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+.presupuesto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presupuesto label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.presupuesto input,
+.presupuesto select,
+.presupuesto textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    font-size: 1rem;
+}
+
+.presupuesto input:focus,
+.presupuesto select:focus,
+.presupuesto textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.presupuesto button {
+    margin-top: 1rem;
+    align-self: flex-end;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.presupuesto button:hover {
+    background-color: #0056b3;
+}
+
+/* —————————————————————————————
+   Página de Iniciar Sesión Mejorada
+   ————————————————————————————— */
+   .login {
+    padding: 2rem;
+    min-height: calc(100vh - 150px); /* para empujar el contenido hacia el centro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+.login-form .form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.login-form input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+.login-form .btn {
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+
+/* —————————————————————————————
+   Página de Registro Mejorada
+   ————————————————————————————— */
+   .registro {
+    padding: 2rem;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.registro-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+.registro-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.registro-form .form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.registro-form input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    font-size: 1rem;
+}
+
+.registro-form input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+.registro-form .btn {
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registro-form .btn:hover {
+    background-color: #0056b3;
+}
+
+.page-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.page-hero__background {
+    background-image: url('/images/hero-destinos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.page-hero__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-size: 2rem;
+    text-align: center;
+}

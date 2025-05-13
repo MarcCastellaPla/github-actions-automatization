@@ -1,0 +1,22 @@
+include partials/header
+
+main.registro
+  .registro-form
+    h2 Registro de Usuario
+    form(action="/register", method="POST")
+      .form__group
+        label(for="email") Email:
+        input#email(type="email", name="email", required)
+      .form__group
+        label(for="nombre") Nombre:
+        input#nombre(type="text", name="name", required)
+      .form__group
+        label(for="apellidos") Apellidos:
+        input#apellidos(type="text", name="surnames", required)
+      .form__group
+        label(for="password") Contraseña:
+        input#password(type="password", name="password", required)
+      input(type="hidden", name="redirect", value="true")
+      button.btn(type="submit") Registrarse
+
+include partials/footer

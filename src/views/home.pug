@@ -1,0 +1,30 @@
+include partials/header
+
+
+main.home
+  .hero
+    img.hero__image(src="/images/hero.webp", alt="Agencia de viajes")
+    .hero__text
+      h1 Agencia de viajes
+
+  .featured__sections
+    .section.card
+      img(src="/images/destinos.jpg", alt="Destinos")
+      h2 Destinos Disponibles
+      p Explora nuestros destinos más populares
+      a.btn(href="/destinations") Ver Destinos
+
+    .section.card
+      img(src="/images/aviones.webp", alt="Aviones")
+      h2 Nuestra Flota
+      p Conoce nuestros aviones
+      a.btn(href="/planes") Ver Aviones
+
+    .section.card
+      img(src="/images/presupuesto.webp", alt="Presupuesto")
+      h2 Solicita un Presupuesto
+      p Planifica tu viaje ideal
+      a.btn(href="/budget") Solicitar
+
+
+include partials/footer

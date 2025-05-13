@@ -1,0 +1,22 @@
+include partials/header
+
+main.presupuesto
+  h1 Solicita tu Presupuesto
+  form(action="/budget", method="POST")
+    label(for="nombre") Nombre:
+    input#nombre(type="text", name="nombre", required)
+    label(for="email") Correo Electrónico:
+    input#email(type="email", name="email", required)
+    label(for="destino") Destino:
+    select#destino(name="destino", required)
+      option(value="" disabled selected) Selecciona un destino
+      each destination in destinations
+        option(value=destination.id) #{destination.name}
+    label(for="fecha") Fecha de Viaje:
+    input#fecha(type="date", name="fecha", required)
+    label(for="mensaje") Mensaje:
+    textarea#mensaje(name="mensaje", rows="4")
+    input(type="hidden", name="user", value=user)
+    button(type="submit") Enviar Solicitud
+
+include partials/footer

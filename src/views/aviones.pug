@@ -1,0 +1,16 @@
+include partials/header
+
+main.aviones
+  .page-hero
+    .page-hero__background(style="background-image: url('/images/hero-aviones.jpg')")
+    .page-hero__text
+      h1 Nuestra Flota de Aviones
+
+  .planes
+    each plane in planes
+      .plane.card
+        img(src=plane.image, alt=plane.model)
+        h2= plane.model
+        p= plane.description
+
+include partials/footer

@@ -1,0 +1,16 @@
+include partials/header
+
+main.destinos
+  .page-hero
+    .page-hero__background
+    .page-hero__text
+      h1 Destinos Disponibles
+  .destinos-grid
+    each destination in destinations
+      .destino__card.card
+        img(src=destination.image, alt=destination.name)
+        h3= destination.name
+        p= destination.description
+        a.btn(href="/budget") Solicitar Presupuesto
+
+include partials/footer
