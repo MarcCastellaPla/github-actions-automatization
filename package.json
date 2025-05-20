@@ -3,8 +3,9 @@
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "start": "node ./src/index.js",
-    "test": "vitest",
-    "test:watch": "vitest --watch"
+    "lint": "eslint .",
+    "build": "vite build",
+    "test": "vitest run"
   },
   "dependencies": {
     "@libsql/client": "0.15.1",
@@ -16,6 +17,8 @@
     "pug": "3.0.3"
   },
   "devDependencies": {
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0",
     "nodemon": "3.1.9",
     "vitest": "^3.1.4"
   }
