@@ -8,6 +8,7 @@ import {
 
 describe("Math utils", () => {
   test("sumNumbers adds numbers correctly", () => {
+    // Hello, I am a modification!
     expect(sumNumbers(2, 3)).toBe(5);
   });
 
