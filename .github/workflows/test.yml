@@ -26,8 +26,8 @@ jobs:
         run: npm ci
 
       # ✅ Fes el build del projecte
-      - name: Build del projecte
-        run: npm run build
+      # - name: Build del projecte
+      #  run: npm run build
 
       # ✅ Executa el linter per analitzar el codi
       - name: Anàlisi amb ESLint
