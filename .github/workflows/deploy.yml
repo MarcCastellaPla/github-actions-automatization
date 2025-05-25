@@ -1,0 +1,30 @@
+name: Test and Deploy
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed] # Només quan es fa "merge" a main
+
+jobs:
+  test-and-deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Vitest tests
+        run: npm test
+
+      - name: Deploy to Render
+        if: success()
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
