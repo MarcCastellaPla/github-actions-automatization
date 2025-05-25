@@ -1,11 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
-    "start": "node ./src/index.js",
-    "lint": "eslint .",
-    "build": "vite build",
-    "test": "vitest run"
+  "dev": "nodemon ./src/index.js",
+  "start": "node ./src/index.js",
+  "lint": "eslint .",
+  "test": "vitest run"
   },
   "dependencies": {
     "@libsql/client": "0.15.1",
