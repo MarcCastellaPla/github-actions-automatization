@@ -21,6 +21,6 @@ describe("Math utils", () => {
   });
 
   test("divideNumbers divides numbers correctly", () => {
-    expect(divideNumbers(10, 2)).toBe(5);
+    expect(divideNumbers(10, 9)).toBe(5);
   });
 });
