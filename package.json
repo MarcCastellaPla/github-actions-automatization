@@ -2,7 +2,10 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "lint": "eslint .",
+    "build": "vite build",
+    "test": "vitest run"
   },
   "dependencies": {
     "@libsql/client": "0.15.1",
@@ -14,6 +17,9 @@
     "pug": "3.0.3"
   },
   "devDependencies": {
-    "nodemon": "3.1.9"
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0",
+    "nodemon": "3.1.9",
+    "vitest": "^3.1.4"
   }
 }
