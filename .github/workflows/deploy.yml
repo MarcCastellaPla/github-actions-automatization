@@ -1,17 +1,16 @@
-name: Test and Deploy
+name: CI/CD
 
+# Només s'executa quan es fa push a main
 on:
-  pull_request:
+  push:
     branches: [main]
-    types: [closed] # Només quan es fa merge
 
 jobs:
   test:
-    if: github.event.pull_request.merged == true
+    name: Build, Lint i Test
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout del codi
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -19,19 +18,20 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Instal·la dependències
         run: npm ci
 
-      - name: Lint
+      - name: Lint amb ESLint
         run: npm run lint
 
-      - name: Test
+      - name: Tests amb Vitest
         run: npm test
 
   deploy:
+    name: Deploy a Render
     needs: test
+    if: success()  # Només si el job `test` ha passat
     runs-on: ubuntu-latest
-    if: success()  # Només si els tests passen
     steps:
-      - name: Deploy to Render
+      - name: Deploy via Deploy Hook
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
